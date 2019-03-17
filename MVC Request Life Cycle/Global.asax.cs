@@ -45,44 +45,35 @@ namespace MVC_Request_Life_Cycle
                 "You can subscribe to the AuthorizeRequest event to perform custom authorization.");
 
         }
-
-
         protected void Application_MapRequestHandler()
         {
             Debug.WriteLine("Map Handler this Exeute After End  Begin Requst to get map Requst" +
                 "The MapRequestHandler event is used by the ASP.NET infrastructure to determine the request handler for the current request based on the file-name extension of the requested resource.");
 
         }
-
         protected void Application_PostMapRequestHandler()
         {
             Debug.WriteLine("Post Map Handler , Occurs when ASP.NET has mapped the current request to the appropriate HTTP handler");
         }
-
         protected void Application_AcquireRequestState()
         {
             Debug.WriteLine("Request State ," +
                 "Occurs when ASP.NET acquires the current state (for example, session state) that is associated with the current request. A valid session ID must exist.");
         }
-
         protected void Application_PreRequestHandlerExecute()
         {
             Debug.WriteLine("Pre Handler Execute brfore  this compiler execute Action (Requset) ," +
                 "Occurs just before ASP.NET starts executing an event handler.");
         }
-
         protected void Application_PostRequestHandlerExecute()
         {
             Debug.WriteLine("Post Handler Execute Note : this execute After execute Action Methods," +
                 "Occurs when the ASP.NET event handler has finished generating the output ");
         }
-
         protected void Application_EndRequest()
         {
             Debug.WriteLine("End Request this execute After exeute PreApplicationStartMethod ");
         }
-
-
         protected void Application_End()
         {
             Debug.WriteLine("End");
